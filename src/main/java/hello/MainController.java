@@ -31,7 +31,7 @@ public class MainController {
     }
 
     @GetMapping("/user/{id}")
-    public @ResponseBody Iterable<User> getUserById(@PathVariable Integer id) {
-        return userRepository.findAllById(id);
+    public @ResponseBody User getUserById(@PathVariable Integer id) {
+        return userRepository.findById(id).get();
     }
 }
