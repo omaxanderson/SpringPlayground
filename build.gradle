@@ -32,7 +32,17 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile("org.springframework.boot:spring-boot-starter-web")
+    // Using the ThymeLeaf view template engine
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+
     compile("org.springframework.boot:spring-boot-devtools")
+    // JPA Data (We are going to use Repositories, Entities, Hibernate, etc...)
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // Use MySQL Connector-J
+    compile 'mysql:mysql-connector-java'
+
+    // For business-class management services such as status, health, errors, etc
+    compile("org.springframework.boot:spring-boot-starter-actuator")
     testCompile("junit:junit")
 }
